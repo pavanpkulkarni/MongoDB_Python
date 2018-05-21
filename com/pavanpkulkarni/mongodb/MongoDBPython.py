@@ -27,9 +27,9 @@ pprint.pprint(students.find_one())
 print("Number of documents  : ", students.count())
 print("Count with condition : ", students.find({'id':5}).count())
 
-# Get all records from MongoDB
-# for student in students.find():
-#     pprint.pprint(student)
+# Get all docs from MongoDB
+for student in students.find():
+    pprint.pprint(student)
 
 for student in students.find({'id':2}):
     pprint.pprint(student)
